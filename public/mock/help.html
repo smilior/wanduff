@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d2a756",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#0A1F0F",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .step-gradient {
+            background: linear-gradient(180deg, rgba(210, 167, 86, 0.15) 0%, rgba(10, 31, 15, 0) 100%);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(210, 167, 86, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+<!-- Top Navigation -->
+<header class="fixed top-0 w-full z-50 border-b border-primary/10 bg-background-dark/80 backdrop-blur-md px-6 lg:px-20 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-primary rounded-lg flex items-center justify-center text-background-dark">
+<span class="material-symbols-outlined font-bold">sports_golf</span>
+</div>
+<h1 class="text-xl font-black tracking-tighter uppercase text-primary">Wanduff</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide text-slate-400">
+<a class="hover:text-primary transition-colors" href="#">FEATURES</a>
+<a class="hover:text-primary transition-colors" href="#">COMMUNITY</a>
+<a class="text-primary" href="#">SUPPORT</a>
+</nav>
+<button class="bg-primary hover:bg-primary/90 text-background-dark px-6 py-2 rounded-full text-sm font-bold transition-all transform hover:scale-105">
+                GET STARTED
+            </button>
+</div>
+</header>
+<main class="pt-32 pb-20">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-6 lg:px-20 mb-20 text-center md:text-left">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold mb-6 tracking-widest uppercase">
+<span class="material-symbols-outlined text-sm">verified</span> User Guide
+            </div>
+<h2 class="text-5xl md:text-7xl font-black leading-tight tracking-tight mb-6">
+                ⛳ ワンダフの<span class="text-primary italic">使い方</span>
+</h2>
+<p class="text-xl text-slate-400 max-w-2xl leading-relaxed">
+                ラウンド中のミスを詳細に記録。独自のデータ分析で、あなたのスコアアップを最短距離でサポートします。
+            </p>
+</section>
+<!-- Visual Timeline Section -->
+<section class="max-w-7xl mx-auto px-6 lg:px-20 mb-32">
+<div class="relative">
+<!-- Vertical Line for Desktop -->
+<div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/50 via-primary/10 to-transparent -translate-x-1/2"></div>
+<!-- Step 1 -->
+<div class="relative flex flex-col md:flex-row items-center gap-12 mb-32">
+<div class="flex-1 md:text-right">
+<span class="text-primary/40 text-8xl font-black opacity-20 block mb-2">01</span>
+<h3 class="text-3xl font-bold mb-4 flex items-center md:justify-end gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">play_circle</span>
+                            ラウンドを開始する
+                        </h3>
+<p class="text-slate-400 leading-relaxed text-lg">
+                            ホーム画面の「ラウンドを始める」をタップ。プレー日・コース名・同伴者などを入力してスタート。
+                        </p>
+</div>
+<div class="relative z-10 size-12 bg-primary rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(210,167,86,0.5)] border-4 border-background-dark">
+<span class="material-symbols-outlined text-background-dark text-xl font-bold">done</span>
+</div>
+<div class="flex-1 w-full">
+<div class="aspect-video rounded-2xl overflow-hidden glass-panel group p-2">
+<img class="w-full h-full object-cover rounded-xl grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Golf course smartphone app interface showing start round screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnQ-9WkgrH0DMqNj_fnk34XUNfcW158mIspqghvsYjUcRqGvpZFqmcV0Vi_h8xiiQ7PslxGmXlR5uYIOHtIl8oTzh2FftRuevzwQruNuPyfg8qglTXxuwH4Dh6SHrqt2LomyytlF0RE0cqyKeiiici3ISUnz9_vsKq4gJV7UK7aJkB1G75tz5Wbbcd4MAjBMFGCqGwwbWkMgAH_8RuGC-XZgUDPbWqkdTgEOUP_i5ShM4OxzK1uHG7aiO6tRv3nmP8T1qjk3AsLZ1p"/>
+</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative flex flex-col md:flex-row-reverse items-center gap-12 mb-32">
+<div class="flex-1">
+<span class="text-primary/40 text-8xl font-black opacity-20 block mb-2">02</span>
+<h3 class="text-3xl font-bold mb-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">edit_square</span>
+                            ホール毎にスコアを記録
+                        </h3>
+<p class="text-slate-400 leading-relaxed text-lg">
+                            各ホール終了後、打数・パット数・フェアウェイキープを入力。ミスが起きたシーンも選択。
+                        </p>
+</div>
+<div class="relative z-10 size-12 bg-primary rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(210,167,86,0.5)] border-4 border-background-dark">
+<span class="material-symbols-outlined text-background-dark text-xl font-bold">done</span>
+</div>
+<div class="flex-1 w-full">
+<div class="aspect-video rounded-2xl overflow-hidden glass-panel group p-2">
+<img class="w-full h-full object-cover rounded-xl grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Golf score entry screen on mobile device" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA4_vU38kBTiQjQXPIERfiHso5jo6bLvbjb7BLUD60bTC9gATmt_x9IbXkdRlG8iQCC7qvEnM4FN2Mon_GxLeUjquIbNT-H2wyShuNqC1BfLbS5NESuTKE2W1-Hjz6jp3TySRs8_bL6w7-lxOlP_yIHu3FTvZCLqt01yk2olV8MmG0HQRAhT_BXjG25UC-Fx0asOL8l3rqhwuXazpP8yTd7Sn01Wti91VgOYlJ0dSSR71FEMwwwtjgiV8bwVUyUu4kPOWFMjtyx6Uw"/>
+</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative flex flex-col md:flex-row items-center gap-12 mb-32">
+<div class="flex-1 md:text-right">
+<span class="text-primary/40 text-8xl font-black opacity-20 block mb-2">03</span>
+<h3 class="text-3xl font-bold mb-4 flex items-center md:justify-end gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">error_outline</span>
+                            ミスシーンを選ぶ
+                        </h3>
+<p class="text-slate-400 leading-relaxed text-lg">
+                            OB・池・バンカー・3パットなどシーン別にタップ。後からミス傾向が一目でわかる.
+                        </p>
+</div>
+<div class="relative z-10 size-12 bg-primary rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(210,167,86,0.5)] border-4 border-background-dark">
+<span class="material-symbols-outlined text-background-dark text-xl font-bold">done</span>
+</div>
+<div class="flex-1 w-full">
+<div class="aspect-video rounded-2xl overflow-hidden glass-panel group p-2">
+<img class="w-full h-full object-cover rounded-xl grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Golf app interface for selecting hazard types like bunker or water" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu0o7Wy67Lz90ppTXKbdbd3tyMzKgIEzF1JGYB1R7t8NwwRw5tfxKBKU5CY8hFvwkcUYluzXMejkk3YfSEbFPP_g6RW64szbbrkH6SWfv2jZWF1fkF1Mdut6W8NxvM42n5SOWd7NTvMLkpphrF8oYc8Tln5f40zY4y4LcSFJSuRYdsNq9kGBqafVyvOPWld-5zwaWJPSS-Op8aMC2OFvY-yOhGVFPPykUm6oNRkSxsEkCaqEdOuJia3kxXTu4x0qDfh22Ob7iTek_o"/>
+</div>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="relative flex flex-col md:flex-row-reverse items-center gap-12 mb-32">
+<div class="flex-1">
+<span class="text-primary/40 text-8xl font-black opacity-20 block mb-2">04</span>
+<h3 class="text-3xl font-bold mb-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">assignment_turned_in</span>
+                            ラウンド終了・振り返り
+                        </h3>
+<p class="text-slate-400 leading-relaxed text-lg">
+                            18ホール後に「終了」をタップ。スコアカードとミス集計が自動生成され、課題が視覚化。
+                        </p>
+</div>
+<div class="relative z-10 size-12 bg-primary rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(210,167,86,0.5)] border-4 border-background-dark">
+<span class="material-symbols-outlined text-background-dark text-xl font-bold">done</span>
+</div>
+<div class="flex-1 w-full">
+<div class="aspect-video rounded-2xl overflow-hidden glass-panel group p-2">
+<img class="w-full h-full object-cover rounded-xl grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Dashboard showing golf analytics and performance metrics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLrEb8xLip-WGvNL7cxctOO2b1J6jRdLd32gZ6qXywplqR_A3d-noCXqOsLSFQxdUJFuHmPwadfDH-7LfXBOwQND0idPef5s3boxrL9OKWUnIA7-anh4zE04BfZpmMWfDrVFQe9r09StKW8J-EV-e50mnLVBky98N4IxhA22wuhgeM4NZmozYz2iIWZfLrTLBR-K5ZKRis0lOUJ6NqORh3kgAiR22kYVJeheNSen2bSoHbKppUQwUJFn-qvWKsA01vfHFbZ8bbEP_J"/>
+</div>
+</div>
+</div>
+<!-- Step 5 -->
+<div class="relative flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1 md:text-right">
+<span class="text-primary/40 text-8xl font-black opacity-20 block mb-2">05</span>
+<h3 class="text-3xl font-bold mb-4 flex items-center md:justify-end gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">analytics</span>
+                            ミスを振り返る
+                        </h3>
+<p class="text-slate-400 leading-relaxed text-lg">
+                            ホームの「ミスを振り返る」から過去のデータを確認。頻出ミスを把握して練習に活かす。
+                        </p>
+</div>
+<div class="relative z-10 size-12 bg-primary rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(210,167,86,0.5)] border-4 border-background-dark">
+<span class="material-symbols-outlined text-background-dark text-xl font-bold">done</span>
+</div>
+<div class="flex-1 w-full">
+<div class="aspect-video rounded-2xl overflow-hidden glass-panel group p-2">
+<div class="w-full h-full bg-slate-800 rounded-xl flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Historical data visualization and trends in golf performance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGnR8I-ogDNm3_U4CKBsKbvoLJ-DPOMAf6dJGZsWFjDkBEfTf82OTxoMcSxX3y9lAf9E0WnvsH2xZ9YdVwaR1I8TSkYtc_wakz9QrQ0EcrDWdsvp_OeS1gprta40jn1mUccCC1A8S8X9ry5Kn_DAzke86vTNMRRLeosLmUIpVR8UMgF0v8KjavMXynAd1S5Jeo8-LHVRBsyUQEn3yc2eKieQUmxqwkffuMMSq9hEcD9vl5oXn829VEBsFbwD4fnRfpgxpN32gYMTez"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pro Tip Box -->
+<section class="max-w-4xl mx-auto px-6 mb-32">
+<div class="relative p-8 md:p-12 rounded-2xl bg-gradient-to-br from-primary/20 via-primary/5 to-transparent border border-primary/30 overflow-hidden group">
+<div class="absolute top-0 right-0 -mt-8 -mr-8 size-40 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-all duration-500"></div>
+<div class="flex flex-col md:flex-row items-center gap-8 relative z-10">
+<div class="size-20 rounded-2xl bg-primary flex items-center justify-center flex-shrink-0 shadow-xl shadow-primary/20">
+<span class="material-symbols-outlined text-background-dark text-4xl font-bold">lightbulb</span>
+</div>
+<div>
+<h4 class="text-primary text-sm font-black tracking-widest uppercase mb-2">Pro Tip / コツ</h4>
+<p class="text-xl md:text-2xl font-medium leading-relaxed italic">
+                            「ラウンド中はミスシーンだけ選んでおき、終了後にまとめて詳細を記入する使い方が便利です。入力は約10秒で完了します。」
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="max-w-4xl mx-auto px-6">
+<div class="text-center mb-12">
+<h2 class="text-4xl font-black mb-4 uppercase tracking-tight">よくあるご質問</h2>
+<div class="w-20 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="space-y-4">
+<!-- FAQ Item 1 -->
+<div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors">
+<span class="text-lg font-bold">データはどこに保存されますか？</span>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</button>
+<div class="px-6 pb-6 text-slate-400 leading-relaxed">
+                        端末内に保存。機種変更時はデータ移行機能を利用して、安全にデータを引き継ぐことが可能です。
+                    </div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors">
+<span class="text-lg font-bold">途中でアプリを閉じても大丈夫？</span>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</button>
+<div class="px-6 pb-6 text-slate-400 leading-relaxed">
+                        自動保存機能が搭載されています。再度アプリを開くと、直前の記録箇所からスムーズに再開できます。
+                    </div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors">
+<span class="text-lg font-bold">過去のラウンドデータは削除できますか？</span>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</button>
+<div class="px-6 pb-6 text-slate-400 leading-relaxed">
+                        履歴一覧にて該当するラウンドを長押しすることで、削除オプションが表示されます。
+                    </div>
+</div>
+<!-- FAQ Item 4 -->
+<div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors">
+<span class="text-lg font-bold">ハンディキャップの計算はできますか？</span>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</button>
+<div class="px-6 pb-6 text-slate-400 leading-relaxed">
+                        現在開発中です。今後のアップデートにより、JGAハンディキャップに準拠した計算機能を追加予定です。
+                    </div>
+</div>
+<!-- FAQ Item 5 -->
+<div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors">
+<span class="text-lg font-bold">複数人のスコアを同時に記録できますか？</span>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</button>
+<div class="px-6 pb-6 text-slate-400 leading-relaxed">
+                        現在はプレーヤー本人の記録に特化していますが、将来的に同伴者とのスコア共有機能を予定しています。
+                    </div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="border-t border-white/10 pt-20 pb-10 bg-background-dark px-6 lg:px-20">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+<div class="flex items-center gap-3 opacity-50 grayscale">
+<div class="size-8 bg-primary rounded flex items-center justify-center text-background-dark">
+<span class="material-symbols-outlined font-bold text-sm">sports_golf</span>
+</div>
+<h1 class="text-lg font-black tracking-tighter uppercase">Wanduff</h1>
+</div>
+<div class="flex gap-8 text-slate-500 text-sm">
+<a class="hover:text-primary transition-colors" href="#">利用規約</a>
+<a class="hover:text-primary transition-colors" href="#">プライバシーポリシー</a>
+<a class="hover:text-primary transition-colors" href="#">特定商取引法</a>
+</div>
+<div class="flex gap-4">
+<div class="size-10 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined">share</span>
+</div>
+<div class="size-10 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined">mail</span>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto text-center mt-12 text-slate-600 text-xs">
+            © 2024 Wanduff Golf App. All rights reserved. Precision is our game.
+        </div>
+</footer>
+</body></html>
